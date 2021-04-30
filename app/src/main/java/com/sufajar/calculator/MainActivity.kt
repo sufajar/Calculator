@@ -11,7 +11,7 @@ import net.objecthunter.exp4j.ExpressionBuilder
 
 class MainActivity : AppCompatActivity(),ProsessCalculator {
     private lateinit var binding : ActivityMainBinding;
-    var lastDot: Boolean = false
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,8 +36,6 @@ class MainActivity : AppCompatActivity(),ProsessCalculator {
     }
 
     override fun onEqual(view: View) {
-
-
         try {
             val text = binding.txtHasil.text.toString() //to string
             val eval = ExpressionBuilder(text).build()
